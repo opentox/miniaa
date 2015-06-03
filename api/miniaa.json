@@ -35,7 +35,7 @@
                         "name": "password",
                         "description": "password",
                         "required": true,
-                        "type": "password",
+                        "type": "string",
                         "format": "password"
                     }
                 ],
