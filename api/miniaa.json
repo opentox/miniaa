@@ -16,6 +16,9 @@
                 "consumes": [
                     "text/plain"
                 ],
+                "tags": [
+                    "authentication"
+                ],
                 "produces": [
                     "text/plain"
                 ],
@@ -52,6 +55,9 @@
             "post": {
                 "description": "Devalidates a token. Requires Subjectid.",
                 "operationId": "login",
+                "tags": [
+                    "authentication"
+                ],
                 "consumes": [
                     "text/plain"
                 ],
