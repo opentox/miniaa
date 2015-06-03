@@ -9,7 +9,7 @@
         "https"
     ],
     "paths": {
-        "/aa/authenticate": {
+        "/miniaa/authenticate": {
             "post": {
                 "description": "Authentication against OpenSSO. Returns token. Requires Username and Password.",
                 "operationId": "login",
@@ -48,7 +48,7 @@
                 }
             }
         },
-        "/aa/logout": {
+        "/miniaa/logout": {
             "post": {
                 "description": "Devalidates a token. Requires Subjectid.",
                 "operationId": "login",
