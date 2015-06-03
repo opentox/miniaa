@@ -35,7 +35,8 @@
                         "name": "password",
                         "description": "password",
                         "required": true,
-                        "type": "string"
+                        "type": "password",
+                        "format": "password"
                     }
                 ],
                 "responses": {
