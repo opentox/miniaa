@@ -2,7 +2,13 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "OpenTox OpenSSO"
+        "title": "OpenTox OpenSSO Authentication",
+        "description": "Minimal service to generate and destroy authentication-token.",
+        "contact": {
+            "name": "Micha Rautenberg, in silico toxicology",
+            "url": "http://www.in-silico.ch",
+            "email": "support@in-silico.ch"
+        }
     },
     "host": "enm.in-silico.ch",
     "schemes": [
@@ -11,13 +17,13 @@
     "paths": {
         "/miniaa/authenticate": {
             "post": {
+                "tags": [
+                    "authentication"
+                ],
                 "description": "Authentication against OpenSSO. Returns token. Requires Username and Password.",
                 "operationId": "login",
                 "consumes": [
                     "text/plain"
-                ],
-                "tags": [
-                    "authentication"
                 ],
                 "produces": [
                     "text/plain"
@@ -41,13 +47,13 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful response"
+                        "$ref": "#/responses/200"
                     },
                     "400": {
-                        "description": "Bad Request"
+                        "$ref": "#/responses/400"
                     },
                     "401": {
-                        "description": "Unauthorized"
+                        "$ref": "#/responses/401"
                     }
                 }
             }
@@ -76,16 +82,33 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful response"
+                        "$ref": "#/responses/200"
                     },
                     "400": {
-                        "description": "Bad Request"
+                        "$ref": "#/responses/400"
                     },
                     "401": {
-                        "description": "Unauthorized"
+                        "$ref": "#/responses/401"
                     }
                 }
             }
         }
-    }
+    },
+    "responses": {
+        "200": {
+            "description": "OK"
+        },
+        "400": {
+            "description": "Bad Request"
+        },
+        "401": {
+            "description": "Unauthorized"
+        }
+    },
+    "tags": [
+        {
+            "name": "authentication",
+            "description": "minimal Authentication service"
+        }
+    ]
 }
